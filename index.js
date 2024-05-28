@@ -28,7 +28,9 @@ mongoose.connection.on("disconnected", ()=>{
 
 
 //middleware
-app.use(cors({  credentials: true, origin: ["http://localhost:3000"],methods:["GET","POST","DELETE","PUT"]}))
+app.use(cors({  credentials: true, origin: ["http://localhost:3000",
+"https://gmail-signin-server.onrender.com"],
+methods:["GET","POST","DELETE","PUT"]}))
 
 app.use(express.json())
 app.use(cookieParser())
